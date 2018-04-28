@@ -1,0 +1,111 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "materialize";
+
+*,
+:before,
+:after {
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+}
+
+html,
+body {
+   min-height: 100%;
+}
+
+body {
+   font-family: 'Oswald', sans-serif;
+   color: #000;
+   background-color: #fff;
+}
+
+.wrapper {
+   text-align: center;
+}
+
+/* Clip text element */
+.clip-text {
+   font-size: 4em;
+   font-weight: bold;
+   line-height: 1;
+   position: relative;
+   display: inline-block;
+   margin: .25em;
+   padding: .5em .75em;
+   text-align: center;
+   /* Color fallback */
+   color: #fff;
+   -webkit-background-clip: text;
+
+   -webkit-text-fill-color: transparent;
+}
+
+.clip-text:before,
+.clip-text:after {
+   position: absolute;
+   content: '';
+}
+
+/* Background */
+.clip-text:before {
+   z-index: -2;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background-image: inherit;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+   position: absolute;
+   z-index: -1;
+   top: .125em;
+   right: .125em;
+   bottom: .125em;
+   left: .125em;
+   background-color: #fff;
+}
+
+/* Change the background position to display letter when the black zone isn't here */
+.clip-text--no-textzone:before {
+   background-position: -.65em 0;
+}
+
+.clip-text--no-textzone:after {
+   content: none;
+}
+
+/* Use Background-size cover for photo background and no-repeat background */
+.clip-text--cover,
+.clip-text--cover:before {
+   background-repeat: no-repeat;
+   -webkit-background-size: cover;
+           background-size: cover;
+ background-position: 50% 50%;
+}
+
+.logo {
+   background-image: url(https://s3.envato.com/files/176427509/Polygons%20Background%2001_preview1%20.JPG);
+}
+
+#logo {
+  margin: 0 auto;
+  text-align: center;
+}

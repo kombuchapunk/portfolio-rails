@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PortfolioRails</title>
+    <title>Misha Petrov. Full-stack web developer | Blockchain enthusiast | I strive for perfection and simplicity</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,8 +10,13 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <div id="logo">
+        <div class="clip-text logo">MISHA PETROV</div>
+      </div>
+      <%= yield %>
+    </div>
   </body>
 </html>
