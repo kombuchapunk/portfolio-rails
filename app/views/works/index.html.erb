@@ -1,0 +1,5 @@
+<% @works.each do |work| %>
+  <div class="portfolio-piece" style="background: url(<%= work.images %>); no-repeat, fixed, center;">
+    <%= link_to work.name, work_path(work) %>
+  </div>
+<% end %>
