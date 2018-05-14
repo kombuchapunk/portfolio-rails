@@ -1,24 +1,32 @@
-# README
+# Portfolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Description
+Simple Rails app with Admin Panel to add new projects to the portfolio. Data is being stored in a postgres database.
 
-Things you may want to cover:
+### Tools Used:
+* Ruby/Rails
+* psql
+* html
+* CSS
+* Materialize
 
-* Ruby version
+### Skills and point to emphasize on the Portfolio
 
-* System dependencies
+Outgoing and detail-oriented, proficient at building long-term  professional relationships.
 
-* Configuration
+##### Soft Skills
+* Leadership
+* Creativity
+* Communication
+* Adaptability
 
-* Database creation
+##### Technical Skills
+* GIT
+* HTML/SASS/Bootstrap
+* Javascript/Angular/Node.js
+* Ruby/Rails
+* Solidity
 
-* Database initialization
+### Description and further exploration
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Plan to fully refactor the UI.
