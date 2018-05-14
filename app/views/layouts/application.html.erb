@@ -1,20 +1,27 @@
-<!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
   <head>
+    <!-- title -->
     <title>Misha Petrov. Full-stack web developer | Blockchain enthusiast | I strive for perfection and simplicity</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
     <div id="logo">
       <div class="clip-text logo">MISHA PETROV</div>
     </div>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
