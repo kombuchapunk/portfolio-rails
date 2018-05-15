@@ -1,15 +1,15 @@
-<div class="row">
-  <div class="col s12 cards-container">
-    <% @works.each do |work| %>
-      <div class="card">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="index-img activator" src=<%=work.images%>>
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4"><%=work.name %></span>
-          <p><%= link_to "Learn more", work_path(work) %></p>
-        </div>
+<div class="card-wrapper">
+  <% @works.each do |work| %>
+  <div class="card effect">
+    <div class="thumbnail"><img class="top" src="<%= work.images %>"/></div>
+    <div class="bottom">
+      <h1><%= work.name %></h1>
+      <div class="tools">
+        <h2><%= work.tools %></h2>
       </div>
-    <% end %>
+      <div class="separator"></div>
+      <p><%= work.description %></p>
+    </div>
   </div>
+  <% end %>
 </div>

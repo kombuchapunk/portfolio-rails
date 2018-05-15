@@ -40,7 +40,11 @@ gem 'devise'
 
 gem 'activeadmin'
 
-gem 'materialize-sass', '~> 1.0.0.rc1'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+
+gem 'bootstrap', '~> 4.1.1'
+
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

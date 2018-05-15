@@ -8,19 +8,19 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
 
-    <link rel="stylesheet" href="css/responsive.css" />
+    <meta name="viewport" content="width=device-width">
+
   </head>
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <div id="logo">
-      <div class="clip-text logo">MISHA PETROV</div>
-    </div>
-    <div class="container">
+
+    <div class="container-fluid">
+      <div class="fond"> <span class="s1">misha.</span><span class="s2">.petrov</span></div>
       <%= yield %>
     </div>
   </body>

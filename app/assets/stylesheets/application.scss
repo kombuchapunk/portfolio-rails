@@ -14,99 +14,205 @@
  *= require_self
  */
 
-@import "materialize";
+ @import url(https://fonts.googleapis.com/css?family=Roboto);
+ @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+ @import "bootstrap";
 
-*,
-:before,
-:after {
-   -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-           box-sizing: border-box;
-}
+ @media (max-width:993px) {
+   /* For mobile phones: */
+   .card {
+     height: 580px !important;
+     max-width: 700px !important;
+     padding-top: 0 !important;
+     padding-bottom: 20px !important;
+   }
+   .thumbnail {
+     margin-top: 0 !important;
+   }
+   img.top {
+     object-fit: cover !important;
+   }
+ }
 
-html,
-body {
-   min-height: 100%;
-}
-
-body {
-   font-family: 'Oswald', sans-serif;
-   color: #000;
-   background-color: #fff;
-}
-
-.wrapper {
-   text-align: center;
-}
-
-/* Clip text element */
-.clip-text {
-   font-size: 4em;
-   font-weight: bold;
-   line-height: 1;
-   position: relative;
-   display: inline-block;
-   margin: .25em;
-   padding: .5em .75em;
-   text-align: center;
-   /* Color fallback */
-   color: #fff;
-   -webkit-background-clip: text;
-
-   -webkit-text-fill-color: transparent;
-}
-
-.clip-text:before,
-.clip-text:after {
-   position: absolute;
-   content: '';
-}
-
-/* Background */
-.clip-text:before {
-   z-index: -2;
+ /*Just the background stuff */
+ span.s1 {
+   position: fixed;
    top: 0;
-   right: 0;
+   font-size: 15rem;
+   font-weight: 800;
+   color: rgba(60,68,71, 0.3);
+ }
+
+ span.s2 {
+   font-weight: 800;
+   position: fixed;
    bottom: 0;
+   right: 20px;
+   font-size: 15rem;
+   color: rgba(60,68,71, 0.3);
+ }
+
+ /*My hum... body.. yeah.. */
+ body {
+   background-color: #F2F1EF;
+   font-family: "Roboto", sans-serif;
+ }
+
+ .card-wrapper {
+   margin-top: 200px;
+ }
+
+ /* The card */
+ .card {
+   height: 640px;
+   width: 765px;
+   margin: 0 auto !important;
+   margin-bottom: 80px !important;
+   background-color: #FFF;
+
+   border: 0 !important;
+ }
+
+ /* Image on the left side */
+ .thumbnail {
+   position: relative;
    left: 0;
-   background-image: inherit;
-}
+   top: 0;
+   height: 400px;
+   width: 100%;
+   margin-bottom: 30px;
+   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+   overflow: hidden;
+   border: 0 !important;
+ }
+ .thumbnail:hover {
+   cursor: pointer;
+ }
 
-/* Text Background (black zone) */
-.clip-text:after {
+ /*object-fit: cover; */
+ /*object-position: center; */
+ img.top {
    position: absolute;
-   z-index: -1;
-   top: .125em;
-   right: .125em;
-   bottom: .125em;
-   left: .125em;
-   background-color: #fff;
+   object-fit: cover !important;
+   object-position: center;
+   left: 50%;
+   top: 50%;
+   height: 100%;
+   width: 100%;
+   padding: 0;
+   -webkit-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+ }
+
+ /* Right side of the card */
+
+ .bottom {
+   margin-left: 30px;
+   margin-right: 30px;
+ }
+
+ .tools {
+   background-color: #e74c3c;
+   height: 30px;
+   width: 130px;
+   border-radius: 20px;
+   text-align: center !important;
+   color: #fff;
+   font-weight: bold;
+   padding-left: 10px;
+   padding-right: 10px;
+ }
+
+ h2 {
+   padding-top: 8px;
+   margin-right: 6px;
+   text-align: right;
+   font-size: 0.8rem;
+ }
+
+ .separator {
+   margin-top: 10px;
+   border: 1px solid #C3C3C3;
+ }
+
+ p {
+   text-align: justify;
+   padding-top: 10px;
+   font-size: 0.95rem;
+   line-height: 150%;
+   color: #4B4B4B;
+ }
+
+ /* DATE of release */
+ h5 {
+   position: absolute;
+   left: 30px;
+   bottom: -120px;
+   font-size: 6rem;
+   color: #C3C3C3;
+ }
+
+ h6 {
+   position: absolute;
+   left: 30px;
+   bottom: -55px;
+   font-size: 2rem;
+   color: #C3C3C3;
+ }
+
+ /* Those futur buttons */
+ ul {
+   margin-left: 250px;
+ }
+
+ li {
+   display: inline;
+   list-style: none;
+   padding-right: 40px;
+   color: #7B7B7B;
+ }
+
+ .effect
+{
+  	position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect:before, .effect:after
+{
+	content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect:after
+{
+	right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
 }
 
-/* Change the background position to display letter when the black zone isn't here */
-.clip-text--no-textzone:before {
-   background-position: -.65em 0;
-}
-
-.clip-text--no-textzone:after {
-   content: none;
-}
-
-/* Use Background-size cover for photo background and no-repeat background */
-.clip-text--cover,
-.clip-text--cover:before {
-   background-repeat: no-repeat;
-   -webkit-background-size: cover;
-           background-size: cover;
-  background-position: 50% 50%;
-}
-
-.logo {
-   background-image: url(https://s3.envato.com/files/176427509/Polygons%20Background%2001_preview1%20.JPG);
-}
 
 #logo {
+  position: fixed;
+  top: 0;
+  left: 40%;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 30px;
+
+  font-size: 5rem;
 }
